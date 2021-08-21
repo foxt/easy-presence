@@ -1,14 +1,15 @@
 {
   "name": "easy-presence",
-  "version": "1.0.0",
-  "description": "Easy rich presence for Discord without discord-rpc.",
+  "version": "1.0.0-fix1",
+  "description": "Discord rich presence, batteries included!",
   "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "tsc --build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rblxRP/easypresence.git"
+    "url": "git+https://github.com/rblxRP/easy-presence.git"
   },
   "keywords": [
     "discord",
@@ -18,9 +19,9 @@
   "author": "rblxRP Developers",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/rblxRP/easypresence/issues"
+    "url": "https://github.com/rblxRP/easy-presence/issues"
   },
-  "homepage": "https://github.com/rblxRP/easypresence#readme",
+  "homepage": "https://github.com/rblxRP/easy-presence#readme",
   "devDependencies": {
     "@types/node": "^16.6.2",
     "@typescript-eslint/eslint-plugin": "^4.29.2"

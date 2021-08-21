@@ -1,12 +1,14 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const EasyPresence = require("..").EasyPresence;
 // process.env["EZP-DEBUG"] = "true";
-let client = new EasyPresence("626092891667824688");
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const client = new (require("..").EasyPresence)("878603502048411648"); // replace this with your Discord Client ID.
 client.on("connected", () => {
-    console.log("Connected as", client.environment.user.username);
+    console.log("Hello,", client.environment.user.username);
 });
 
-client.on("activityUpdate", console.log);
+// This will be logged when the presence was sucessfully updated on Discord.
+client.on("activityUpdate", (activity) => {
+    console.log("Now you're playing", activity.name);
+});
 
 setInterval(() => {
     client.setActivity({

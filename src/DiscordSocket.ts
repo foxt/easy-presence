@@ -31,7 +31,6 @@ export function createConnection(path: string, connectionListener?: () => void):
         buffer.writeUInt32LE(opcode, 0);
         buffer.writeUInt32LE(dlen, 4);
         buffer.write(data, 8);
-        console.log(buffer);
         return socket.write(buffer);
     };
 

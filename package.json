@@ -2,7 +2,7 @@
   "name": "easy-presence",
   "version": "1.0.0",
   "description": "Easy rich presence for Discord without discord-rpc.",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,0 +1,28 @@
+{
+  "name": "easy-presence",
+  "version": "1.0.0",
+  "description": "Easy rich presence for Discord without discord-rpc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rblxRP/easypresence.git"
+  },
+  "keywords": [
+    "discord",
+    "ipc",
+    "rich-presence"
+  ],
+  "author": "rblxRP Developers",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/rblxRP/easypresence/issues"
+  },
+  "homepage": "https://github.com/rblxRP/easypresence#readme",
+  "devDependencies": {
+    "@types/node": "^16.6.2",
+    "@typescript-eslint/eslint-plugin": "^4.29.2"
+  }
+}

@@ -19,7 +19,7 @@ interface ActivityParty {
     // a unique identifier for this party
     id?: string;
     // info about the size of the party. First number is the amount of people in the party, the second is the maximum amount of people in a party.
-    size: [number, number];
+    size?: [number, number];
 }
 
 interface button {

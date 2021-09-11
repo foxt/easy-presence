@@ -1,3 +1,4 @@
+import { log } from "console";
 import { join } from "path";
 import { BaseEventEmitter } from "./BaseEventEmitter";
 import { Activity, DiscordEnvironment, IPCOpcode } from "./consts";
@@ -25,10 +26,14 @@ export class SocketManager extends BaseEventEmitter {
     constructor(clientId: string) {
         super(clientId);
         this.on("disconnect", () => {
-            if (this.currentPresence && !this.scheduledReconnect && (this.status == "errored" || this.status == "disconnected")) {
+            if (!this.scheduledReconnect) {
+                log("Scheduling connect");
                 this.scheduledReconnect = true;
-                setTimeout((() => this.connect()).bind(this), 5000);
-            }
+                setTimeout((() => {
+                    log(this.currentPresence && (this.status == "errored" || this.status == "disconnected") ? "Running scheduled reconnect" : "Scheduled restart reconnect.");
+                    if (this.currentPresence && (this.status == "errored" || this.status == "disconnected")) this.connect();
+                }).bind(this), 5000);
+            } else {log("Scheduling connect");}
         });
         this.connect().catch(() => {});
     }

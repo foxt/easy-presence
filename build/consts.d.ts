@@ -10,7 +10,7 @@ interface ActivityAssets {
 }
 interface ActivityParty {
     id?: string;
-    size: [number, number];
+    size?: [number, number];
 }
 interface button {
     label: string;

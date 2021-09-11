@@ -7,7 +7,7 @@ client.on("connected", () => {
 
 // This will be logged when the presence was sucessfully updated on Discord.
 client.on("activityUpdate", (activity) => {
-    console.log("Now you're playing", activity.name);
+    console.log("Now you're playing", activity ? activity.name : "nothing!");
 });
 
 setInterval(() => {

@@ -9,7 +9,7 @@ Discord Rich Presence, made easy!
  - Simple
    - You only have to add 1 line of code to your project to get working rich presence. It's really that simple.
  - Light
-   - EasyPresence has **0** dependencies, and has a bundle size of 30kb (unminified).
+   - EasyPresence has **0** dependencies, and is only 30kb (less than 40% of `discord-rpc`).
  - Typed
    - EasyPresence is written in pure TypeScript, and therefore has typings straight out of the box.
 

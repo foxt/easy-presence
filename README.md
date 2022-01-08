@@ -57,5 +57,8 @@ setInterval(() => {
         },
         timestamps: { start: new Date() }
     });
+    
+    // Remove the presence
+    //client.setActivity();
 }, 1000);
 ```

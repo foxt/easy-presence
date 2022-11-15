@@ -33,7 +33,7 @@ export class SocketManager extends BaseEventEmitter {
                     log(this.currentPresence && (this.status == "errored" || this.status == "disconnected") ? "Running scheduled reconnect" : "Scheduled restart reconnect.");
                     if (this.currentPresence && (this.status == "errored" || this.status == "disconnected")) this.connect();
                 }).bind(this), 5000);
-            } else {log("Scheduling connect");}
+            } else { log("Scheduling connect"); }
         });
         this.connect().catch(() => {});
     }
